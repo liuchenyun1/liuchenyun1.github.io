@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>lcy-game</title>
+</head>
+<body>
+  <canvas id="canvas" width="1000" height="1000"></canvas>
+  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+  <script type="text/javascript">
+    var img_x = 50;
+    var img_y = 50;
+    console.log(document.body.clientHeight," ",document.body.clientWidth);
+    if(document.body.clientHeight<1000 || document.body.clientWidth<1000){
+      document.getElementsByTagName("body")[0].innerHTML="<h1>你的浏览器窗口过小，请调大后刷新</h1><br /><button onclick=\"javascrtpt:window.location.href=\'./main.html\'\"><h2>刷新</h2></button>";
+      document.getElementsByTagName("title")[0].innerText="你的浏览器窗口过小，请调大后刷新";
+      // window.location.href='./main.html';
+      throw Error();
+    }
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
+    context.shadowColor = "rgba(0,0,0,0.5)";
+    context.shadowOffsetX = 2;
+    context.shadowOffsetY = 2;
+    context.shadowBlur = 5;
+    var now = 0;
+    var score = 0;
+    var array_img = [];
+    var array_x = [];
+    var array_y = [];
+    var pop = [];
+    var click_image = function (event) {
+      // console.log(event.pageX + " " + event.pageY);
+      for (let i = 0; i < array_img.length; i++) {
+        if (!pop[i] && event.pageX >= array_x[i] && event.pageX <= array_x[i] + img_x && event.pageY >= array_y[i] && event.pageY <= array_y[i] + img_y) {
+          //array_img.splice(i, 1);
+          //array_x.splice(i, 1);
+          //array_y.splice(i, 1);
+          let img = new Image();
+          img.src = 'https://i.loli.net/2019/07/13/5d292ac06a4bb73129.png';
+          array_img.splice(i, 1, img);
+          pop.splice(i, 1, true);
+          score++;
+        }
+      }
+    }
+    var Interval=setInterval(function () {
+      //console.log(score);
+      now++;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.lineWidth='5';
+      context.moveTo(0,canvas.height);
+      context.beginPath();
+      context.lineTo(canvas.width,canvas.width);
+      context.closePath();
+      context.strokeStyle='#ffffff';
+      context.stroke();
+      context.font = "20px Arial";
+      context.textAlign = "left";
+      context.textBaseline = "top";
+      context.strokeText("Score: "+score, 0, 0);
+      if (now % 50 == 0) {
+        let img = new Image();
+        img.src = 'https://i.loli.net/2019/07/12/5d28a008289ce91499.png';
+        array_img.push(img);
+        let x = (Math.random() * 10000) % (canvas.width - img_x);
+        array_x.push(x);
+        let y = 0;
+        array_y.push(y);
+        pop.push(false);
+      }
+      for (var i = 0; i < array_img.length; i++) {
+        array_y[i] += 2;
+        context.drawImage(array_img[i], array_x[i], array_y[i], img_x, img_y);
+        if (array_y[i] > canvas.height) {
+          if (!pop[i]) clearInterval(Interval);
+          else {
+            array_img.splice(i, 1);
+            array_x.splice(i, 1);
+            array_y.splice(i, 1);
+            pop.splice(i, 1);
+          }
+        }
+      }
+    }, 10);
+    $("body").click(click_image);
+    setInterval(function () {
+      // console.log("123");
+      for (var i = 0; i < array_img.length; i++) {
+        if (array_y[i] > canvas.height) {
+          if (!pop[i]) {
+            var x = array_x[i];
+            var y = array_y[i];
+            var image = array_img[i];
+            clearInterval(Interval);
+            setInterval(function () {
+              context.clearRect(0, 0, canvas.width, canvas.height);
+              while (array_img.length) {
+                array_img.shift();
+                array_x.shift();
+                array_y.shift();
+                pop.shift();
+              }
+              clearInterval(Interval);
+              context.drawImage(image, x, y, img_x, img_y);
+              context.font = "100px Arial";
+              context.textAlign = "center";
+              context.textBaseline = "middle";
+              context.strokeText("Game Over", canvas.width / 2, canvas.height / 2 - 200);
+              context.strokeText("Your final score is: " + score, canvas.width / 2, canvas.height / 2);
+            }, 0);
+          }
+        }
+      }
+    },0)
+  </script>
+</body>
+</html>
