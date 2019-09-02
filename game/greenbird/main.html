@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>lcy-game</title>
+  <title>打绿鸟（</title>
 </head>
 <body>
+  <p></p>
   <canvas id="canvas" width="1000" height="1000"></canvas>
   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
   <script type="text/javascript">
@@ -19,6 +20,8 @@
     }
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext('2d');
+    var create_speed=50;
+    var move_speed=2;
     context.shadowColor = "rgba(0,0,0,0.5)";
     context.shadowOffsetX = 2;
     context.shadowOffsetY = 2;
@@ -53,13 +56,13 @@
       context.beginPath();
       context.lineTo(canvas.width,canvas.width);
       context.closePath();
-      context.strokeStyle='#ffffff';
+      context.strokeStyle='#000000';
       context.stroke();
       context.font = "20px Arial";
       context.textAlign = "left";
       context.textBaseline = "top";
       context.strokeText("Score: "+score, 0, 0);
-      if (now % 50 == 0) {
+      if (now % create_speed == 0) {
         let img = new Image();
         img.src = 'https://i.loli.net/2019/07/12/5d28a008289ce91499.png';
         array_img.push(img);
@@ -70,7 +73,7 @@
         pop.push(false);
       }
       for (var i = 0; i < array_img.length; i++) {
-        array_y[i] += 2;
+        array_y[i] += move_speed;
         context.drawImage(array_img[i], array_x[i], array_y[i], img_x, img_y);
         if (array_y[i] > canvas.height) {
           if (!pop[i]) clearInterval(Interval);
@@ -112,7 +115,7 @@
           }
         }
       }
-    },0)
+    },0);
   </script>
 </body>
 </html>
