@@ -4,22 +4,112 @@
         <meta charset="utf-8" />
         <title>膜拜AH</title>
         <style type="text/css">
-            [p]{
-                margin: 0 auto;
-                text-align:center;
-                width: 500px;
-            }
+            p{width: 1000px;text-align:left}
+            div{width: 1000px;text-align:left}
         </style>
     </head>
-    <body>
-        <p style="height: 50px;background-color: #80c0ff;font-size: 35px">膜拜Aiming_<font color="#ff0000">High</font></p>
-        <p style="height: 50px;background-color: #aaccaa;font-size: 35px">荒野</p>
-        <p style="height: 200px;background-color: #e0ffff">
-        &nbsp;&nbsp;&nbsp;&nbsp;曾经，有一个高度发达的文明在这个星球上度过了它最为繁荣的时代。在那时，人们相信Aiming_<font color="#ff0000">High</font>是最强的神，也是这个星球的科技、魔法与信仰三大学科体系高度发展的原因。
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;然而好景不长，曾被人们认为亘古不变的真理在一次失控的魔法实验之后支离破碎。科技与魔法的支柱轰然倒塌，毁灭席卷了整个星球。
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;高楼变为废墟，法阵化作黄土，雕像碎成砂砾，但Aiming_<font color="#ff0000">High</font>并未抛弃这个文明——因为信仰仍在。
-        </p>
+    <body>  
+        <center>
+            <p style="height: 50px;background-color: #80c0ff;font-size: 35px">膜拜Aiming_<font color="#ff0000">High</font></p>
+            <p style="height: 50px;background-color: #aaccaa;font-size: 35px">荒野</p>
+            <p style="height: 100x;background-color: #e0ffff">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经，有一个高度发达的文明在这个星球上度过了它最为繁荣的时代。在那时，人们相信Aiming_<font color="#ff0000">High</font>是最强的神，也是这个星球的科技、魔法与信仰三大学科体系高度发展的原因。
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而好景不长，曾被人们认为亘古不变的真理在一次失控的魔法实验之后支离破碎。科技与魔法的支柱轰然倒塌，毁灭席卷了整个星球。
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高楼变为废墟，法阵化作黄土，雕像碎成砂砾，但Aiming_<font color="#ff0000">High</font>并未抛弃这个文明——因为信仰仍在。
+            </p>            
+            <div>
+                <p style="height: 20px;background-color: #eeeecc">膜拜</p>
+                <p id="mobai">您已膜拜0次</p>
+                <button id="momomo" onclick="momomo_click()">膜拜Aiming_<font color="#ff0000">High</font>1次</button>
+                <br>
+                <button id="better_mobai" onclick="better_mobai_click()">真诚膜拜 Lv.0 [???次膜拜]</button>
+                <br>
+                <button id="xintu" onclick="xintu_click()">0位信徒 [???次膜拜]</button>
+                <br>
+                <button id="jiaotang" onclick="jiaotang_click()">0座教堂 [???位信徒]</button>             
+                <br>
+            </div>
+            <script>
+                var mobai=0,better_mobai_level=0,xintu=0,jiaotang=0,better_mobai_money=0,xintu_money=0,jiaotang_money=0;
+                setInterval(function(){
+                    mobai+=(better_mobai_level*10+1)*xintu;
+                },1)
+                setInterval(function(){
+                    document.getElementById("mobai").innerText="您已膜拜"+mobai+"次";
+                    document.getElementById("momomo").innerHTML="膜拜Aiming_<font color=\"#ff0000\">High</font>"+(better_mobai_level*10+1)+"次";
+                    document.getElementById("better_mobai").innerText="真诚膜拜 Lv."+better_mobai_level+" ["+better_mobai_money+"次膜拜]";
+                    document.getElementById("xintu").innerText=xintu+"位信徒 ["+xintu_money+"次膜拜]";
+                    document.getElementById("jiaotang").innerText=jiaotang+"座教堂 ["+jiaotang_money+"位信徒]";
+                },0)
+                var momomo_click=function(){
+                    mobai+=better_mobai_level*10+1;
+                }
+                var better_mobai_click=function(){
+                    if(better_mobai_money<=mobai){
+                        better_mobai_level++;
+                        mobai-=better_mobai_money;
+                        better_mobai_money+=10000;
+                    }
+                }
+                var xintu_click=function(){
+                    if(xintu_money<=mobai){
+                        xintu++;
+                        mobai-=xintu_money;
+                        xintu_money+=100000;
+                        xintu_money/=Math.max(1,(xinyang/10000));
+                    }
+                }
+                var jiaotang_click=function(){
+                    if(jiaotang_money<=xintu){
+                        jiaotang++;
+                        xintu-=jiaotang_money;
+                        xintu_money=xintu*100000;
+                        xintu_money/=Math.max(1,(xinyang/10000));
+                        jiaotang_money+=10;
+                    }
+                }
+            </script>
+            <div>
+                <p style="height: 20px;background-color: #eeeecc">信仰（传教测试中...）</p>
+                <p id="xinyang">信仰:0</p>
+                <button id="change" onclick="change_click()">转换信仰 [+0信仰]</button>
+                <br>
+                <button id="jinshu" onclick="jinshu_click()">0卷经书 [???信仰]</button>
+                <br>
+                <button id="tansuo" onclick="tansuo_click()">探索遗迹 [???本经书][???位信徒]</button>
+            </div>
+            <script>
+                var xinyang=0,jinshu=0,tansuo=0,jinshu_money=0,tansuo_money1=1000,tansuo_money2=100;
+                setInterval(function(){
+                    document.getElementById("xinyang").innerText="信仰:"+xinyang;
+                    document.getElementById("change").innerText="转换信仰 [+"+mobai/1000+"信仰]";
+                    document.getElementById("jinshu").innerText=jinshu+"卷经书 ["+jinshu_money+"信仰]";
+                    document.getElementById("tansuo").innerText="探索遗迹 ["+tansuo_money1+"本经书]["+tansuo_money2+"位信徒]";
+                },0)
+                var change_click=function(){
+                    xinyang+=mobai/1000;
+                    mobai=0;
+                }
+                var jinshu_click=function(){
+                    jinshu++;
+                    if(jinshu_money<=xinyang){
+                        xinyang-=jinshu_money;
+                        jinshu_money+=10000;
+                    }
+                }
+                var tansuo_click=function(){
+                    if(tansuo_money1<=jinshu && tansuo_money2<=xintu){
+                        tansuo++;
+                        xintu-=tansuo_money2;
+                        jinshu-=tansuo_money1;
+                        jinshu_money=10000*jinshu;
+                        xintu_money=xintu*100000;
+                        xintu_money/=Math.max(1,(xinyang/10000));
+                    }
+                }
+            </script>
+        </center>
     </body>
 </html>
