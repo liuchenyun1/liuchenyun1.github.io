@@ -10,6 +10,10 @@
     </head>
     <body>  
         <center>
+            <script>
+                var xinyang=0,jinshu=0,tansuo=0,jinshu_money=0,tansuo_money1=1000,tansuo_money2=100;
+                var mobai=0,better_mobai_level=0,xintu=0,jiaotang=0,better_mobai_money=0,xintu_money=0,jiaotang_money=0;
+            </script>
             <p style="height: 50px;background-color: #80c0ff;font-size: 35px">膜拜Aiming_<font color="#ff0000">High</font></p>
             <p style="height: 50px;background-color: #aaccaa;font-size: 35px">荒野</p>
             <p style="height: 100x;background-color: #e0ffff">
@@ -32,7 +36,6 @@
                 <br>
             </div>
             <script>
-                var mobai=0,better_mobai_level=0,xintu=0,jiaotang=0,better_mobai_money=0,xintu_money=0,jiaotang_money=0;
                 setInterval(function(){
                     mobai+=(better_mobai_level*10+1)*xintu;
                 },1)
@@ -72,7 +75,7 @@
                 }
             </script>
             <div>
-                <p style="height: 20px;background-color: #eeeecc">信仰（传教测试中...）</p>
+                <p style="height: 20px;background-color: #eeeecc">信仰</p>
                 <p id="xinyang">信仰:0</p>
                 <button id="change" onclick="change_click()">转换信仰 [+0信仰]</button>
                 <br>
@@ -81,7 +84,6 @@
                 <button id="tansuo" onclick="tansuo_click()">探索遗迹 [???本经书][???位信徒]</button>
             </div>
             <script>
-                var xinyang=0,jinshu=0,tansuo=0,jinshu_money=0,tansuo_money1=1000,tansuo_money2=100;
                 setInterval(function(){
                     document.getElementById("xinyang").innerText="信仰:"+xinyang;
                     document.getElementById("change").innerText="转换信仰 [+"+mobai/1000+"信仰]";
@@ -110,6 +112,26 @@
                     }
                 }
             </script>
+            <p style="height: 50px;background-color: #aaccaa;font-size: 35px;">遗迹</p>
+            <p id="yiji">已发现0个遗迹</p>
+            <p style="height: 50px;background-color: #80c0ff">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;过去的事物深埋于地下，而且数量稀少，发掘它们需要坚定的信仰。尽管道路艰辛，但这是前进所必须的代价。文明不进即退，而这残存的文明已经无路可退。
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在遗迹中，人们惊喜地发现了向Aiming_<font color="#ff0000">High</font>祈求水晶的途径。拥有了水晶，两扇大门便随着遗迹的探索徐徐开启……
+            </p>
+            <script>
+            setInterval(function(){
+                document.getElementById("yiji").innerText="已发现"+tansuo+"个遗迹";
+            },0)
+            </script>
+            <div>
+                <p style="height: 20px;background-color: #eeeecc">遗迹大门</p>
+                <p id=shuijin>水晶:0</p>
+                <button id="shuijin_get">祈求水晶 [0次膜拜]</button>
+                <button id="wisdom">智慧 Lv.0 [0水晶]</button>
+                <button id="mystery">奥秘 Lv.0 [0水晶]</button>
+                <button id="nature">本质 Lv.0 [0水晶]</button>
+            </div> 
         </center>
     </body>
 </html>
