@@ -13,6 +13,7 @@
             <script>
                 var xinyang=0,jinshu=0,tansuo=0,jinshu_money=0,tansuo_money1=1000,tansuo_money2=100;
                 var mobai=0,better_mobai_level=0,xintu=0,jiaotang=0,better_mobai_money=0,xintu_money=0,jiaotang_money=0;
+                var shuijin=0,wisdom=0,mystery=0,nature=0,wisdom_money=0,mystery_money=0,nature_money=0,shuijin_money=0;
             </script>
             <p style="height: 50px;background-color: #80c0ff;font-size: 35px">膜拜Aiming_<font color="#ff0000">High</font></p>
             <p style="height: 50px;background-color: #aaccaa;font-size: 35px">荒野</p>
@@ -133,7 +134,13 @@
                 <button id="nature">本质 Lv.0 [0水晶]</button>
             </div>
             <script>
-                
+                setInterval(function(){
+                    document.getElementById("shuijin").innerText="水晶:"+shuijin;
+                    document.getElementById("shuijin_get").innerText="祈求水晶 ["+shuijin_money+"次膜拜]";
+                    document.getElementById("wisdom").innerText="智慧 Lv."+wisdom+" ["+wisdom_money+"水晶]";
+                    document.getElementById("mystery").innerText="奥秘 Lv."+mystery+" ["+mystery_money+"水晶]";
+                    document.getElementById("nature").innerText="本质 Lv."+nature+" ["+nature_money+"水晶]";
+                },0)
             </script>
         </center>
     </body>
