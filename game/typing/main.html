@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <title>typing</title>
+    </head>
+    <body>
+        <!-- <input type="number" id="input1" min="0" value=""><p id="1">单位：每10ms几个像素,现在：</p> -->
+        <!-- <br> -->
+        <!-- <input type="number" id="input2" min="0" value=""><p id="2">单位：每几ms生成一个,现在：</p> -->
+        <!-- <br> -->
+        <!-- <button id="change" onclick="change()">切换</button> -->
+        <!-- <br> -->
+        <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+        <canvas height="1000px" width="1000px" id="canvas"></canvas>
+        <p id="word"></p>
+        <script>
+            var canvas=document.getElementById("canvas");
+            var ctx=canvas.getContext('2d');
+            if(document.body.clientHeight<1000 || document.body.clientWidth<1000){
+                document.getElementsByTagName("body")[0].innerHTML="<h1>你的浏览器窗口过小，请调大后刷新</h1><br /><button onclick=\"javascrtpt:window.location.href=\'./main.html\'\"><h2>刷新</h2></button>";
+                document.getElementsByTagName("title")[0].innerText="你的浏览器窗口过小，请调大后刷新";
+                // window.location.href='./main.html';
+                throw Error();
+            }
+            var len=5;
+            var img_x=120,img_y=80;
+            var enemy=[],enemy_x=[],enemy_y=[],enemy_less=[];
+            var character=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            var words=["number","three","interj","class","grade","seven","eight","eleven","twelve","minus","thirteen","fourteen","fifteen","hello","please","spell","secret","English","English","clock","pencil","ruler","sharpener","eraser","computer","mouse","keyboard","banana","apple","orange","Chinese","Japanese","think","picture","woman","teacher","everyone","today","school","school","sorry","where","thanks","thank","goodbye","interj","parrot","sister","father","mother","excuse","these","those","their","right","right","friend","brother","child","children","welcome","morning","class","student","America","there","there","after","after","washroom","classmate","middle","middle","interj","phone","policeman","licence","interj","address","interj","forgot","China","family","family","grandma","grandpa","husband","daughter","parent","parents","England","uncle","afternoon","doctor","worker","guess","behind","chair","under","floor","photo","classroom","answer","blackboard","schoolbag","flower","broom","window","raincoat","football","table","Macao","there","there","thing","purse","money","worry","fifty","colour","black","house","small","playhouse","great","young","pioneer","Young","women","count","river","light","animal","people","little","sheep","colour","yellow","white","green","purple","brown","orange","sweater","light","which","clothes","whose","blouse","dress","shirt","trousers","skirt","yours","theirs","glove","about","beside","watch","about","thirty","midnight","quarter","break","lunch","breakfast","clean","supper","supper","watch","London","Tokyo","Sydney","hundred","yourself","bedroom","between","funny","favourite","speak","could","minute","Tuesday","February","eighteenth","listen","careful","carefully","short","mouth","heavy","empty","certainly","carry","listen","there","basket","bottle","bottle","juice","wardrobe","America","other","wrong","broken","catch","right","goodness","plane","knife","robot","broke","round","mummy","pleasure","drink","hungry","thirsty","water","bread","glass","glass","would","something","porridge","dumpling","fruit","piece","piece","hamburger","noodle","potato","chips","coffee","madam","cream","cream","different","vegetable","sometimes","sport","interj","basketball","throw","skate","volleyball","question","postal","tennis","table","chess","player","every","Friday","homework","homework","write","sleep","close","photos","Sunday","clear","closed","Friday","early","Wednesday","borrow","Thursday","Monday","Saturday","Sunday","interj","dictionary","tomorrow","evening","after","model","maths","straight","wheel","music","worried","ticket","learn","meeting","bring","foreign","difference","other","about","Australia","Canada","Japan","America","little","French","great","Great","hotel","building","follow","family","first","postcard","teach","dinner","school","Toronto","schoolboy","country","friends","France","textbook","Englishman","Australian","Canadian","foreigner","visit","letter","different","every","noodle","vegetable","restaurant","often","potato","because","housework","machine","again","phone","electronic","smoke","dance","living","dining","driver","farmer","soldier","assistant","assistant","nurse","postman","factory","station","station","hospital","office","office","study","party","friendly","medicine","night","money","weekend","writer","cleaner","baker","artist","hobby","place","weekday","leave","begin","sports","usually","right","sometimes","after","exercise","morning","shopping","shopping","garden","reading","playground","match","quickly","bridge","train","holiday","plane","clean","story","problem","earlier","chicken","fridge","shopping","cheap","expensive","tomato","onion","carrot","market","dollar","pound","health","course","travel","minibus","price","example","example","stand","field","bright","foreign","sunglasses","language","helpful","business","company","manager","century","lesson","traffic","matter","September","happy","second","given","meaning","important","before","never","third","afraid","sound","laugh","waste","waste","fifth","field","hometown","discuss","fishing","fishing","agree","boating","boating","maybe","mountain","hiking","hiking","picnic","after","problem","quick","quickly","start","tired","hurry","hurry","eighth","salesgirl","beautiful","together","autumn","festival","ninth","mooncake","sweet","inside","store","together","October","taste","outside","harvest","another","delicious","better","pumpkin","twelfth","turkey","celebrate","tractor","slowly","wheat","country","bleat","agree","summer","winter","exciting","until","college","farming","somebody","nobody","shall","nothing","dolphin","grass","dangerous","panda","elephant","monkey","tiger","snake","rabbit","horse","should","forest","climb","finish","cinema","seafood","twentieth","place","bookshop","toilet","museum","front","front","right","along","turning","metre","kilometre","better","moment","street","around","popular","soccer","quite","month","village","strong","yesterday","November","remember","healthy","visit","before","enjoy","world","moment","reply","match","drive","diary","telephone","India","rained","momery","everything","umbrella","newspaper","paper","morning","breakfast","goodbye","useful","scientist","invent","always","everywhere","understand","first","April","painting","airport","Swedish","concert","concert","tonight","singer","journalist","famous","Sweden","thousand","accident","careless","break","someone","heart","happen","tourist","hurry","grape","science","marry","married","subject","friendship","anyone","season","write","January","March","August","December","spring","weather","heavily","really","snowman","round","nearly","unlike","opposite","sunny","cloud","cloudy","rainy","windy","snowy","later","later","strange","sunshine","melon","radio","report","north","south","times","northeast","above","daytime","below","northwest","worse","foggy","birthday","invite","message","message","ready","sandwich","plate","candle","doorbell","present","smile","double","shout","study","yourself","Christmas","during","Spring","shower","showery","magical","Berlin","Moscow","kitchen","cupboard","sugar","pepper","spoon","chopsticks","cabbage","butter","cheese","Italian","pizza","Indian","kinds","workplace","Italy","chocolate","laugh","either","anything","neither","without","waiter","madam","order","famous","library","cross","crossing","across","church","video","reach","corner","pocket","still","finger","geography","physics","history","suddenly","first","wrong","noise","noise","disturb","passenger","stand","necessary","waiting","queue","jumper","queue","patient","visitor","laugh","mistake","quiet","quietly","reading","alone","plastic","throw","change","midnight","arrive","telephone","complain","quarrel","quarrel","surprise","police","voice","enjoy","themselves","trouble","headache","headache","cough","cough","terrible","serious","dream","worst","asleep","asleep","plant","storm","difficult","awake","awake","relax","again","angry","smell","become","instead","instead","enough","exercise","island","farther","farthest","somewhere","anybody","ourselves","oneself","perhaps","happily","longer","missing","anywhere","solve","believe","everybody","sooner","circle","myself","cousin","engineer","cancer","death","palace","Summer","herself","while","after","faces","whole","wonderful","himself","tooth","teach","clever","yourselves","piano","moonlight","afford","knock","knock","pardon","surprise","blind","shine","bright","brightly","through","silently","along","return","cookie","sports","active","active","relay","runner","loudly","stick","catch","moment","doing","behind","winner","rather","result","dance","headmaster","turns","person","speed","thought","technology","interested","interested","Washington","future","future","large","spend","unusual","software","university","develop","BASIC","Microsoft","personal","improve","bridge","pleased","disease","million","decide","billion","lucky","unlucky","almost","speaker","conductor","check","painter","neighbour","upstairs","downstairs","angry","usual","usual","sound","chemistry","sweep","choose","truck","seller","biology","knock","refuse","politely","scissors","racket","motorbike","review","Russian","novel","wallet","ground","cause","suddenly","luckily","gatekeeper","mention","imagine","while","repair","steer","steering","diver","breathe","oneself","moment","Titanic","pleasant","iceberg","there","watch","front","lifeboat","place","thankful","Boston","noisy","penguin","shellfish","pretty","human","player","several","shelf","already","knowledge","schoolyard","librarian","probably","sadly","bookmark","think","encourage","abroad","screen","spoil","surfing","surfer","beach","twice","canoe","describe","especially","attract","large","matter","possible","since","since","although","prize","event","Olympic","Olympic","practice","business","cross","channel","mainland","journey","among","proud","proud","speak","pride","unless","truth","waste","dirty","afraid","member","rubbish","collect","whenever","produce","wherever","litter","public","protect","dustbin","recycle","suppose","riddle","nearby","headmaster","mount","possible","except","province","enjoyable","railway","lively","kinds","doing","scenery","offer","magazine","practise","moving","click","score","least","scuba","Internet","search","double","press","enter","button","capital","population","ridge","whether","flight","straight","straight","think","chance","coral","coral","sound","brochure","outdoor","badly","allow","explore","explorer","undersea","amaze","amazed","however","colourful","society","since","cover","earth","clean","ocean","pollute","group","terrific","sometime","shark","earth","alike","attack","Africa","South","watchtower","appear","neatly","spirit","inventor","pupil","build","print","track","frighten","frightened","safety","telegraph","invention","lifetime","graduate","healthily","clearly","frustrate","frustrated","wonder","worth","confidence","merry","decorate","angel","circle","stocking","chimney","single","Turkey","fireplace","though","though","generosity","relative","greet","western","special","owner","birth","shepherd","brush","writing","bamboo","jacket","metal","stamp","store","widely","Britain","Germany","Frenchman","traveller","cotton","camera","digital","ordinary","aeroplane","satellite","rocket","dinosaur","display","display","natural","guide","fossil","desert","Desert","human","disappear","discover","feather","found","entrance","fragile","parking","danger","pause","teapot","serve","filled","object","drought","directly","flood","prevent","northern","towards","farmland","point","point","thanks","better","correct","grand","notice","audience","slipper","height","beeper","someday","printer","print","document","connect","modem","provide","monitor","point","universe","satellite","space","spaceship","receive","woolen","impossible","activity","increase","after","multiply","challenge","beginning","beginning","square","hardly","prefer","prefer","rather","pardon","worth","secondhand","diagram","discussion","doing","chart","download","Brazil","excited","excited","leather","online","Canon","shape","decision","decision","screen","credit","credit","interest","place","forever","mistake","opera","Peking","Great","Palace","rewarding","grateful","lonely","success","Scotland","mostly","education","treat","before","regard","exactly","experience","injection","painful","earthquake","story","crash","mobile","mobile","least","least","realize","train","training","captain","deserve","confident","striker","midfield","midfield","excellent","nervous","carry","final","amazing","pleased","teamwork","baseball","never","boring","against","expect","rough","necklace","hands","detective","inspector","thief","notice","robber","escape","victim","robbery","excuse","steep","British","misty","wonder","expert","alive","anytime","progress","essential"];
+            for(let i=0;i<1250;i++) words[i]=words[i].toLowerCase();
+            // console.log(character)
+            var choosing=-1;
+            var img=new Image();
+            var now=0,move=0.3,score=0,create=200;
+            img.src="./enemy.png";
+            /*
+            setInterval(function(){
+                document.getElementById("1").innerText="单位：每10ms几个像素,现在："+move;
+                document.getElementById("2").innerText="单位：每几ms生成一个,现在："+create;
+            },0)
+            var change=function(){
+                move=$("#input1").val();
+                create=$("#input2").val();
+            }*/
+            setInterval(function(){
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.font = "20px Arial";
+                ctx.textAlign = "left";
+                ctx.textBaseline = "top";
+                ctx.strokeText("Score: "+score, 0, 0);
+                now++;
+                if(now%create==0){
+                    enemy.push(img);
+                    enemy_y.push(0);
+                    let x=Math.floor(Math.random()*(canvas.width-img_x));
+                    enemy_x.push(x);
+                    let str=[]
+                    let id=Math.floor(Math.random()*1250);
+                    for(let i=0;i<words[id].length;i++) str.push(words[id][i]);
+                    /*
+                    for(let i=1;i<=len;i++){
+                        let id=Math.floor(Math.random()*25);
+                        // console.log(id);
+                        str.push(character[id]);
+                    }
+                    */
+                    // console.log(str);
+                    enemy_less.push(str);
+                }
+                // console.log(enemy_less);
+                for(let i=0;i<enemy.length;i++){
+                    if(enemy_less[i]==[]){
+                        enemy.splice(i,1);
+                        enemy_x.splice(i,1);
+                        enemy_y.splice(i,1);
+                        enemy_less.splice(i,1);
+                        score++;
+                    }
+                    enemy_y[i]+=move;
+                    ctx.drawImage(enemy[i],enemy_x[i],enemy_y[i],img_x,img_y);
+                    let str=""
+                    for(let j=0;j<enemy_less[i].length;j++) str=str+enemy_less[i][j];
+                    if(str==""){
+                        enemy.splice(i,1);
+                        enemy_x.splice(i,1);
+                        enemy_y.splice(i,1);
+                        enemy_less.splice(i,1);
+                        score++;
+                    }
+                    ctx.font = "20px Arial";
+                    ctx.textAlign = "left";
+                    ctx.textBaseline = "top";
+                    ctx.strokeText(str,enemy_x[i],enemy_y[i]-30);
+                    if(enemy_y[i]>canvas.height){
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        ctx.font = "100px Arial";
+                        ctx.textAlign = "center";
+                        ctx.textBaseline = "middle";
+                        // ctx.strokeText("Score: "+score, 0, 0);
+                        ctx.strokeText("Game Over", canvas.width / 2, canvas.height / 2 - 200);
+                        ctx.strokeText("Your final score is: " + score, canvas.width / 2, canvas.height / 2);
+                        throw Error("Game Over");
+                    }
+                    str="";
+                    if(choosing!=-1) for(let j=0;j<enemy_less[choosing].length;j++) str=str+enemy_less[choosing][j];
+                    ctx.font="50px Arial";
+                    ctx.textAlign="center";
+                    ctx.textBaseline="middle";
+                    if(choosing!=-1) ctx.strokeText(str,canvas.width/2,750);
+                    if(choosing!=-1) document.getElementById("word").innerText=str;
+                    // if(score==10){
+                        // create=500;
+                        // len=5;
+                    // }
+                    // if(score==50){
+                        // create=500;
+                        // len=6;
+                    // }
+                    // if(score==100){
+                        len=8
+                    // }
+                }
+            },10)
+            var hit=function(event){
+                let id=0,mx=0;
+                var char=String.fromCharCode(event.keyCode).toLowerCase();
+                console.log(char)
+                if(choosing==-1){
+                    for(let i=0;i<enemy.length;i++){
+                        if(enemy_less[i][0]==char){
+                            if(enemy_y[i]>mx){
+                                mx=enemy_y[i];
+                                choosing=i;
+                            }
+                        }
+                    }
+                    let flag=false;
+                    if(enemy_less[choosing].length==1) flag=true;
+                    enemy_less[choosing].shift()
+                    if(flag) choosing=-1;
+                }
+                else{
+                    if(enemy_less[choosing][0]==char){
+                        let flag=false;
+                        if(enemy_less[choosing].length==1) flag=true;
+                        enemy_less[choosing].shift()
+                        if(flag) choosing=-1;
+                    }
+                }
+            }
+            $("body").keydown(hit)
+        </script>
+    </body>
+</html>
