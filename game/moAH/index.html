@@ -58,7 +58,7 @@
                     }
                 }
                 var xintu_click=function(){
-                    if(xintu_money<=mobai){
+                    if(xintu_money/Math.max(1,(xinyang/10000))<=mobai){
                         xintu++;
                         mobai-=xintu_money/Math.max(1,(xinyang/10000));
                         xintu_money+=100000;
@@ -126,9 +126,13 @@
                 <p style="height: 20px;background-color: #eeeecc">遗迹大门</p>
                 <p id=shuijin>水晶:0</p>
                 <button id="shuijin_get">祈求水晶 [0次膜拜]</button>
+                <br>
                 <button id="wisdom">智慧 Lv.0 [0水晶]</button>
+                <br>
                 <button id="mystery">奥秘 Lv.0 [0水晶]</button>
+                <br>
                 <button id="nature">本质 Lv.0 [0水晶]</button>
+                <br>
             </div>
             <script>
                 setInterval(function(){
@@ -139,28 +143,28 @@
                     document.getElementById("nature").innerText="本质 Lv."+nature+" ["+nature_money/Math.max(1,nature)+"水晶]";
                 },0)
                 var shuijin_get_click=function(){
-                    if(shuijin_money<=mobai){
+                    if(shuijin_money/Math.max(1,nature)<=mobai){
                         shuijin+=tansuo*Math.max(1,wisdom/2);
                         mobai-=shuijin_money/Math.max(1,nature);
                         shuijin_money+=1000000;
                     }
                 }
                 var wisdom_click=function(){
-                    if(wisdom_money<=shuijin){
+                    if(wisdom_money/Math.max(1,nature)<=shuijin){
                         wisdom++;
                         shuijin-=wisdom_money/Math.max(1,nature);
                         wisdom_money+=1000;
                     }
                 }
                 var mystery_click=function(){
-                    if(mystery_money<=shuijin){
+                    if(mystery_money/Math.max(1,nature)<=shuijin){
                         mystery++;
                         shuijin-=mystery_money/Math.max(1,nature);
                         mystery_money+=1000;
                     }
                 }
                 var nature_click=function(){
-                    if(nature_money<=shuijin){
+                    if(nature_money/Math.max(1,nature)<=shuijin){
                         nature++;
                         shuijin-=nature_money/Math.max(1,nature);
                         nature_money+=1000;
