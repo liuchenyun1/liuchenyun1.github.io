@@ -6,9 +6,12 @@
 </head>
 <body>
   <p></p>
+  <h1>更改速度（测试中）</h1>
+  <input type="text" id="input1"><p id="hint-1">生成速度</p>
+  <input type="text" id="input2"><p id=hint-2>移动速度</p>
+  <button id="change" onclick="change()">修改</button>
+  <br>
   <canvas id="canvas" width="1000" height="1000"></canvas>
-  <input type="text" id="input1">
-  <input type="text" id="input2">
   <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
   <script type="text/javascript">
     var img_x = 50;
@@ -118,6 +121,14 @@
         }
       }
     },0);
+    var change=function(){
+      create_speed=document.getElementById("input1").value;
+      move_speed=document.getElementById("input2").value;
+    }
+    setInterval(function(){
+      document.getElementById("hint-1").innerText="生成速度,现在："+create_speed;
+      document.getElementById("hint-2").innerText="移动速度,现在："+move_speed;
+    },0)
   </script>
 </body>
 </html>
