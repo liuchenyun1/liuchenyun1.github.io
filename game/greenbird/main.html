@@ -40,7 +40,7 @@
           //array_x.splice(i, 1);
           //array_y.splice(i, 1);
           let img = new Image();
-          img.src = 'https://i.loli.net/2019/07/13/5d292ac06a4bb73129.png';
+          img.src = '../../picture/green_bird-pop.png';
           array_img.splice(i, 1, img);
           pop.splice(i, 1, true);
           score++;
@@ -64,7 +64,7 @@
       context.strokeText("Score: "+score, 0, 0);
       if (now % create_speed == 0) {
         let img = new Image();
-        img.src = 'https://i.loli.net/2019/07/12/5d28a008289ce91499.png';
+        img.src = '../../picture/green_bird-bird.png';
         array_img.push(img);
         let x = (Math.random() * 10000) % (canvas.width - img_x);
         array_x.push(x);
