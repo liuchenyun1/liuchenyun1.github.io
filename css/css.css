@@ -1,0 +1,44 @@
+a:link {
+    color: green;
+    font-family: "KaiTi";
+    text-decoration: none;
+}
+
+a:visited {
+    color: chartreuse;
+    font-family: "KaiTi";
+    text-decoration: none;
+}
+
+a:hover {
+    color: aquamarine;
+    font-family: "KaiTi";
+    text-decoration: underline;
+}
+
+a:active {
+    color: aquamarine;
+    font-family: "KaiTi";
+    text-decoration: underline;
+}
+
+html {
+    font-family: "KaiTi";
+    background-color: goldenrod;
+    border: 10px solid green;
+    box-shadow: 5px 5px 10px 5px black;
+}
+
+p {
+    text-indent: 4em;
+}
+
+.name.boy {
+    color: blue;
+    font-family: "FangSong";
+}
+
+.name.girl {
+    color: red;
+    font-family: "FangSong";
+}
