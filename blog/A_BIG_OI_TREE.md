@@ -1,1 +1,0 @@
-![OI.png](https://i.loli.net/2019/08/22/JPVe8w24ZDld1h7.png)
