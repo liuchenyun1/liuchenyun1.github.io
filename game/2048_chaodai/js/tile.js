@@ -27,6 +27,6 @@ Tile.prototype.serialize = function () {
       x: this.x,
       y: this.y
     },
-    value: this.true_value
+    true_value: this.true_value
   };
 };
