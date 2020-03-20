@@ -1,0 +1,486 @@
+body { background-color: black; line-height: 1.2; color: Black; font-family: Atoms, Sans-Serif; padding: 0; -webkit-font-smoothing: antialiased; background-image: url('wallpaper-static.png'), url('wallpaper-scroll.jpg') ; background-repeat: no-repeat, repeat; background-attachment: fixed, scroll; background-position:center bottom, center top; height: 100%; text-shadow: 1px 1px black; }
+@font-face { font-family: Atoms; src: url("BebasNeue-webfont.woff"); }
+@font-face { font-family: Desc,Sans-Serif; src: url("Philosopher-Regular.ttf"); }
+html{min-height:100%;position:relative;}
+#bottom-Info {
+  z-index: 150;
+  width: 100px;
+  height: 35px;
+  background-color: rgba(32,32,32,0.7);
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  border-style: solid;
+  border-bottom: 0px;
+  border-width: 1px;
+  border-color: #898989;
+  border-top-left-radius: 100px 75px;
+  box-shadow: 0 0 10px 0px black;
+}
+button:focus, input:focus, a:focus, btn:focus, img:focus { outline: 0; }
+.gritter-without-image { font-family: Desc,Sans-Serif; font-size: 1.18em; }
+#gritter-notice-wrapper.bottom-right { width: 144px; text-align: center; }
+.gritter-top { background: 0; }
+.gritter-top:hover { background: 0; }
+.gritter-item { background: rgba(0, 2, 12, 0.75); -webkit-border-radius: 15px; }
+.gritter-close { left: auto; right: 1px; outline: 0; }
+.gritter-close:focus { outline: 0; }
+.grit > .gritter-item{padding-left:13px; !important;}
+.nameachi {font-size:12px;}
+.little{font-size:10.5px;}
+#linktoreddit{
+  color:white;
+}
+input[type="button"] {
+  position: absolute!important;
+  left: 0!important;
+}
+#experience{position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  z-index:0;}
+  #linktoreddit:hover{
+    color:lightgray;
+  }
+  .slider-container .back-bar .pointer-label{background-color: transparent !important;}
+  .theme-green .back-bar .selected-bar{background-color: #2C6079;background-image: none;}
+  #previously{margin-top:28px;}
+  div#preloaded-images {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px; 
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+   z-index: -2;
+ }
+
+ table + button + div{display:none;}
+ #Quantum{background-image:url("achivs/Quantum-min.jpg");background-position: center;opacity: 0.8;}
+ #Molecular{background-image:url("achivs/Molecular-min.jpg");background-position: center;opacity: 0.8;}
+ #Cellular{background-image:url("achivs/Cellular-min.jpg");background-position: center;opacity: 0.8;}
+ #Miniature{background-image:url("achivs/Miniature-min.jpg");background-position: top;opacity: 0.8;}
+ #Organic{background-image:url("achivs/Organic-min.jpg");background-position: center;opacity: 0.8;}
+ #Massive{background-image:url("achivs/Massive-min.jpg");background-position: center;opacity: 0.8;}
+ #Planetary{background-image:url("achivs/Planetary-min.jpg");background-position: center;opacity: 0.8;}
+ #Stellar{background-image:url("achivs/Stellar-min.jpg");background-position: center;opacity: 0.8;}
+ #Celestial{background-image:url("achivs/Celestial-min.jpg");background-position: top;opacity: 0.8;}
+ #Galactic{background-image:url("achivs/Galactic-min.jpg");background-position: center;opacity: 0.8;}
+ #Hypergalactic{background-image:url("achivs/Hypergalactic-min.jpg");background-position: center;opacity: 0.8;}
+ #Bonus{background-image:url("achivs/Bonus-min.jpg");background-position: center;opacity: 0.8;}
+ .row > #Achievement{background-image:url("achivs/Achievement-min.jpg");background-position: center;opacity: 0.8;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;}
+ .row > #Special{background-image:url("achivs/Special-min.jpg");background-position: center;opacity: 0.8;}
+ #Universal{background-image:url("achivs/Universal-min.jpg");opacity: 0.8;background-position: center;}
+ #Quantum0,#Molecular1,#Cellular2,#Miniature3,#Organic4,#Massive5,#Planetary6,#Stellar7,#Celestial8,#Galactic9,#Hypergalactic10,#Bonus11,#Special12,#Universal13,#Achievement14{margin-left:-5px;margin-right:-5px;padding-top: 15px;}
+ #Quantum0 > .col-lg-1,#Molecular1 > .col-lg-1,#Cellular2 > .col-lg-1,#Miniature3 > .col-lg-1,#Organic4 > .col-lg-1,#Massive5 > .col-lg-1,#Planetary6 > .col-lg-1,#Stellar7 > .col-lg-1,#Celestial8 > .col-lg-1,#Galactic9 > .col-lg-1,#Hypergalactic10 > .col-lg-1,#Bonus11 > .col-lg-1,#Special12 > .col-lg-1,#Universal13 > .col-lg-1,#Achievement14 > .col-lg-1{margin-right: -10px;}
+ .panel-heading { padding: 5px; }
+ .specdesc { font-size: 20px;font-family: Desc;}
+ .center3 { margin: 48%; color: White; }
+ .donate { font-size: 14px; font-family: Desc; padding-bottom:5px;}
+
+ .achi{width: 241px;margin-left: -97px !important;}
+ .achidesc{font-size:22px;font-family: Desc;}
+ .achieffect{font-size:16px;font-family: Desc;}
+ #mcts1 > div{height: 20px !important;}
+ #mcts1 p {text-align:center;}
+ .navBullets{display:none !important;}
+ #mcts1 .navPrev, #mcts1 .navNext, #mcts1 .navPlay, #mcts1 .navPause{top:4px !important; display:none;}
+
+ #areyousure { display: none; position: fixed; top: 50%; left: 50%; margin-top: -75px; margin-left: -175px; height: 175px; width: 350px; background-image: url("patterns/8.jpg"); z-index: 1; border-radius: 20px; padding: 17px; text-align: center; box-shadow: inset 0 0 2px 2px black; opacity: 0.9; }
+ #export,#resetPres { display: none; position: fixed; top: 50%; left: 50%; margin-top: -139px;
+  margin-left: -212.5px;
+  height: 278px;
+  width: 425px;background-image: url("patterns/8.jpg"); z-index: 1; border-radius: 20px; padding: 17px; text-align: center; box-shadow: inset 0 0 2px 2px black; opacity: 0.9; }
+
+  #ohno {font-size:80px;}
+  #export > textarea{width: 390px;height: 175px;color:black;}
+  #export > p{font-size: 17px;font-family: Desc;margin-bottom: 5px;}
+  #resetPres > p{font-size: 17px;font-family: Desc;margin-bottom: 5px;color:white;}
+  #resetPres{height: 250px;width: 324px;margin-left: -145.5px;margin-top: -156px;}
+  #export > button{margin-top: 3px;}
+
+  .custombtn {padding: 1px 6px; height: 25px;}
+
+  #import { display: none; position: fixed; top: 50%; left: 50%; margin-top: -116px;
+    margin-left: -212.5px;
+    height: 232px;
+    width: 425px;background-image: url("patterns/8.jpg"); z-index: 1; border-radius: 20px; padding: 17px; text-align: center; box-shadow: inset 0 0 2px 2px black; opacity: 0.95; }
+
+    #import > textarea{width: 390px;height: 175px;color:black;}
+    #import > p{font-size: 17px;font-family: Desc;margin-bottom: 5px;}
+    #import > button{margin-top: 2px;}
+
+    #congrats { display: none; position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('patterns/2.jpg');
+      z-index: 5;
+      padding: 17px;
+      text-align: center;
+      box-shadow: inset 0 0 2px 2px black;
+      opacity: 0.9;
+      color: white;}
+      #youwon{font-size: 65px;}
+      #endstat{font-size: 40px;}
+      #congrats > div{font-size:30px;}
+      #alittledark { background: rgba(0, 2, 12, 0.75); display: none; position: absolute; left: 0; top: 0; bottom: 0; right: 0; height: 100%; width: 100%; }
+      #marquees{margin:10px 0 10px 0;color:lightsteelblue;white-space:nowrap;min-height:initial;}
+      #Main { background: rgba(0, 2, 12, 0.5); -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;box-shadow: 0px -2px 50px -2px black;
+      }
+
+      #backtotop:hover { color: White; text-decoration: none; }
+      #backtotop { font-size: large;z-index:50;position: fixed; left: 9px; bottom: 5px;}
+
+      .centermargin1 { margin: 1%; }
+      #idmain2 + div > div { margin-left: auto; margin-right: auto;}
+
+      #achievements {color: White; opacity: 0.9;text-align:center;font-size:50px;}
+      .achiInfo{height:100px;}
+      .oneachi{height:86px;margin:0;}
+      .oneachi > img{position: absolute;left: 0;top: 0;border-radius: 15px;-webkit-border-radius:15px;-moz-border-radius:15px;}
+      .achisectionNames{font-size:60px;}
+      .center4{font-size: 30px;
+        position: absolute;
+        top: 30px;
+        left: 38px;}
+
+        #prestiges{text-align: center;color: white;font-size:50px;margin: 2%;opacity: 0.8;}
+
+        .bonusall{margin-top: 15px;font-size: larger;line-height: initial;outline:0;opacity:0.8;}
+
+        .achinames{font-size:40px;}
+
+        #idmain2 { font-size: 1.5em; position: relative; text-align: center; opacity: 0.9; z-index: 1;}
+        #idmain2 + div { font-size: 1em;opacity: 0.9; }
+        #nbrAtomes { font-size: 1.75em; }
+        #atomepersecond { font-size: 1em; }
+        .tolist { text-align: left; font-size: 15px; font-family: Desc; }
+        .tolist-version { text-align: left; font-size: 20px; font-family: Desc; }
+        #sizetitle { font-size: 35px; }
+
+
+        #idInfosAndProgress { opacity: 0.8; font-size: 1em; height: 293px; }
+
+        #idInfos { background-image: url("images/binding_dark.png"); height: 293px;opacity: 0.85;}
+
+        #idImage { padding: 0; max-width: initial; opacity: 0.85;}
+
+        canvas { overflow: hidden; }
+
+        #TableObjects > div > a > div > input, #idbouton { padding: 0; margin: 0; border: 0; height: 100px; width: 100px; }
+
+        #idInfos > span { position: absolute; font-size: 1.5em; bottom: 0; left: 10px; }
+
+        #idInfos > span + button { position: absolute; right: 65px; bottom: 5px; font-size: large; opacity: 0.9; width:90px;}
+        #idInfos > span + button + button { position: absolute; right: 5px; bottom: 5px; font-size: large; opacity: 0.9; }
+        #idInfos > button:hover { opacity: 1; }
+
+        #notion, #notioff, #paceon, #paceoff{opacity:1;cursor:pointer;color:white;}
+
+        #allthatstuff { text-align: left; }
+
+        .tooltip { font-size: 18px; font-family: Gritter; z-index: 9999; }
+
+        #idInfos > p { font-size: 2.5em; }
+        #idInfos > div > p { font-size: 1em; font-family: Desc; }
+        #idmain2 + div { color: White; font-size: 1.25em;}
+
+        #idprogress { overflow: auto; padding: 0; height: 293px;opacity: 0.85; }
+
+        table { border-color: inherit; }
+
+        progress {transition:0.5s; background-image: url('images/noisy_net.png'); border-radius: 2px; background-size: 35px 20px, 100% 100%, 100% 50%; margin-bottom: 1px; height: 23px; text-align: -moz-center; }
+        progress::-moz-progress-bar { transition:0.5s;background-color: #2C6079; -moz-background-image: url('images/noisy_net.png'); border-radius: 2px; -moz-background-size: 35px 20px, 100% 100%, 50% 50%; text-align: -moz-center; }
+        progress::-webkit-progress-bar { transition:0.5s;background-image: url('images/noisy_net.png'); border-radius: 2px; background-size: 35px 20px, 100% 100%, 50% 50%; }
+        progress::-moz-progress-value { transition:0.5s;text-align: -moz-center; background-color: #2C6079; border-radius: 2px; background-size: 35px 20px, 100% 100%, 50% 50%; }
+        progress::-webkit-progress-value { transition:0.5s;background-color: #387993; border-radius: 2px; background-size: 35px 20px, 100% 100%, 50% 50%; }
+
+        #idmain { text-align: center; opacity: 0.8; border: 0; z-index: 1; color: White; font-size: 1.5em; position: relative; background-image:url("banner.png"); background-repeat: no-repeat; box-shadow:black 0px 1px 5px;}
+        .achisection{height:365px;}
+
+        progress { width: 100%; border: 0; text-align: -moz-center; }
+
+        #specials { padding-top: 15px; }
+        #specials > div { height: 380px; background-image: url('images/noisy_net.png'); border: 1px groove black; opacity: 0.5; }
+        .specinfos { bottom: 0; height: 270px; left: 0; margin: auto; position: absolute; top: 0; right: 0; width: 300px; text-align: center; font-size: 25px; color: White; }
+        .specnames { font-size: 39px; }
+
+        .imagesSpecs { position: absolute; left: 0; top: 0; height: 378px; width: 378px; }
+
+        .specialtransition { transition: 0.5s; }
+
+        .shadow { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1; }
+        .shadow:hover { -webkit-box-shadow: inset 0 0 2px 2px white; -moz-box-shadow: inset 0 0 2px 2px white; box-shadow: inset 0 0 2px 2px white; }
+        .shadow:active { -webkit-box-shadow: inset 0 0 3px 3px white; -moz-box-shadow: inset 0 0 3px 3px white; box-shadow: inset 0 0 3px 3px white; }
+
+        .speccost { padding-top: 30px; }
+        .specresult { font-size: 16px;font-family: Atoms;}
+
+        p { margin: 0; padding: 0; }
+        .optionchoice{font-size:24px;}
+
+        .alltheprogress { text-align: -moz-center; text-align: -webkit-center; position: relative; display: block; text-shadow: 0px 0px; }
+        .allp2 { display: block; position: relative;margin-bottom:-6px; }
+        .fraction { display: inline; position: absolute; margin: 0px; padding-left: 3px; }
+        .apsProgress { position: absolute; margin: 0px; right: 5px; }
+
+        .divinfo { text-align: center; position: absolute; top: 0; display: inline-block; font-size: 16px; width: 73.5%; right: 0; -moz-box-shadow: inset 0 0 5px 5px #888; -webkit-box-shadow: inset 0 0 2px 2px #888; box-shadow: inset 0 0 5px 1px grey; height: 100%; border-left: 0; }
+
+        .linktotop {color: white;text-decoration: none}
+        .linktotop:hover {color: white;text-decoration: none}
+
+        .name { text-align: center; font-size: 1.43em; display:inline;}
+        .name:hover { opacity:0.8;cursor:pointer;}
+        .namesagi { font-size: 1.3em; text-align:center;display:inline;}
+        .namesagi:hover { opacity:0.8;cursor:pointer;}
+        .cost { display: inline; font-size: 1.35em; }
+        #tableObjects { border-left: 0px; border-right: 0px;}
+        #TableObjects > div { color: white; background-image: url("textures/zwartevilt.png"); padding: 0; height: 102px; border: 1px; border-color: Black; border-style: groove; }
+        .hoverbox:hover { box-shadow: inset 0 0 5px 2px grey; }
+
+        .javascriptdisabled { position: fixed; left: 0; top: 0; height: 100%; width: 100%; background-color: Black; z-index: 2; color: White; text-align: center; background-image: url('background/fusion.jpg'); }
+
+        .version { position: fixed; bottom: 0; right: 7px; opacity: 0.5; z-index: 2; color: white; font-size: 22px; }
+        .mute {position: fixed; right: 55px; border:none; outline : 0; background:transparent; box-shadow: none; opacity:0.85;}
+        .mute:hover{ border:none; outline : 0; background:transparent; box-shadow: none; opacity:1;}
+
+        :before, :after { -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+        #tblUpgrades { margin-top: 15px; color: White; opacity: 0.85; margin-bottom: 15px;}
+        .rowOn {background-image: url("textures/zwartevilt.png");}
+        .rowOn > td{border: 1px groove black;}
+
+        .upgrades { margin: auto; cursor: pointer; position: relative; }
+        .divinfo > div { margin: 8.5%; }
+        #meters, #kilometers, #light-years { font-size: 22px; }
+
+        .showing{margin-right: auto; }
+        .upTotal{width: 69px;}
+        .upTotal > p{font-size:22px;text-align:center;background-image:url('patterns/7.jpg');
+        -webkit-background-position:left;background-position:left;height: 33px;
+        padding-top: 4px;}
+
+        .multi{width: 250px;
+          height: 34px;
+          text-align: center;
+          font-size: 22px;
+        }
+
+        .radio-inline+.radio-inline, .checkbox-inline+.checkbox-inline{margin-left:0;}
+
+        #prestiges > img {margin-left: auto;margin-right: auto;margin-top:100px;margin-bottom:100px;}
+        .multi > p{background-image:url('patterns/1.jpg');height: 33px;background-position: center;
+        padding-top: 4px;}
+
+        .lowwidth { width: 34px; height: 34px; opacity: 0.75; text-align: center; padding: 0; border-radius: 1px; }
+        .highwidth { width: 300px; height: 34px; content: ''; z-index: -1; background-position: center; background-repeat: no-repeat; padding: 0;}
+
+        .highwidth > p { text-align: center; font-size: 1.5em;
+          background: rgba(0, 2, 12, 0.5);
+          height: 27px; }
+          .ImagesUp { position: relative; }
+          #TableObjects > div > a:hover { opacity: 0.85; transition: all .2s ease; }
+          #TableObjects > div > a:active { opacity: 8; transition: all .1s ease; }
+
+          input:hover { box-shadow: inset 0 0 5px 1px black; }
+          input:active { box-shadow: inset 0 0 5px 2px black; }
+
+          .optionitem{font-size: 24px;}
+
+          .stat { opacity: 0.8; }
+
+          .optionsheader { font-size: 50px; }
+
+          .stars { position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; }
+          .twinkling { position: fixed; top: 0px; left: 0px; bottom: 0px; right: 0px; }
+          .container { min-height: 100%; }
+
+          .hey { bottom: 0; opacity: 1; right: 50%; border: 0; border-top-right-radius: 25px; }
+
+          .center { margin: auto; }
+          .center2 { margin: 10%; text-align: center; font-size: 20px; }
+          .toclick { opacity: 0.8; cursor: pointer; }
+          .toclick:hover { opacity: 1; }
+
+          .littlex10{position:absolute;bottom:4px;right:33px;padding:0px 3px;line-height:initial;font-size:14px;opacity:0.7;}
+          .littlex10:hover{opacity:1;}
+
+          .littlemax{position:absolute;bottom:4px;right:4px;padding:0px 3px;line-height:initial;font-size:14px;opacity:0.7;}
+          .littlemax:hover{opacity:1;}
+
+          .navig { font-size: 2em; }
+          .navig ul { margin-bottom: 0; }
+          .navig ul li { padding: 5px; }
+          .navig ul li a { color: white; opacity: 0.7; }
+          .navig ul li a:hover { opacity: 1; text-decoration: none; }
+
+          #alloptions { padding-top: 10px; display: none; color: White; opacity: 0.8;text-align:center;}
+
+          .divinfo > div > img { padding-bottom: 5px; padding-right: 3px; }
+
+          #starson, #starsoff { font-size: 24px; padding-left: 15px; }
+          #starson a, #starsoff a { color: White; }
+          #tickspeed + div{width:160px !important;}
+
+          /* ipad horizontal */
+          @media only screen and (max-width: 1199px) {
+            #tickspeed + div{width:130px !important;}
+            .centermargin1 { margin: 1%; }
+            #idmain2 + div > div { margin-top: 1%; margin-bottom: 1%; }
+            #idImage img { margin: 0; }
+            #idInfos { height: 300px; margin-left: -23px; }
+            #idInfos > div > p { font-size: 0.9em; }
+            #idprogress { height: 300px; width: 27.35%;}
+            #idmain2 { transition: 0s; }
+            .divinfo > div { margin: 7%; }
+            .divinfo { width: 79%; }
+            #specials > div { height: 313px; }
+            .imagesSpecs { height: 313px; width: 313px; }
+            .specnames { font-size: 25px; }
+            .specdesc { font-size: 17px; }
+            .speccost { font-size: 21px; }
+            .specresult { font-size: 14px; }
+            .specinfos { height: 250px; width: 241px; margin-top: 65px; }
+            .achisection {height: 536px;}
+            .oneachi > img {position: relative;}
+            #youwon{font-size:40px;}
+            #endstat{font-size:20px;}
+            #congrats > div > p{font-size:16px;}
+
+
+            @media only screen and (max-width: 1000px) {
+              .centermargin1 { margin: 1%; }
+              #idmain2 + div > div { margin-top: 1%; margin-bottom: 1%; }
+              #idImage img { margin: 0; }
+              #idInfos { height: 300px; margin-left: -23px;width: 669px; }
+              #idInfos > div > p { font-size: 0.9em; }
+              #idprogress { height: 297px; width: 100%;}
+              #idmain2 { transition: 0s; }
+              .divinfo { width: 382px; }
+            }
+
+            /* ipad vertical */
+            @media only screen and (max-width: 780px) {
+              #meters, #kilometers, #light-years { font-size: 22px; }
+              #idInfos { height: 300px; margin-left: -12px; }
+              #TableObjects > div { height: 75px; }
+              .divinfo { position: absolute; height: 74px; width: 78.5%; padding-top: 3px; }
+              #TableObjects > div > a > div { text-align: center; }
+              .center2 { position: relative; margin: initial; padding-top: 12px; }
+              #nbrAtomes { font-size: 1.25em; }
+              #atomepersecond { font-size: 0.8em; }
+              #idmain2 + div { font-size: 0.6em; height: 131px; }
+              .navig { font-size: 25px; }
+              #idInfos > p { font-size: 2em; }
+              #idInfos > div > p { font-size: 0.95em; }
+              #sizetitle { font-size: 30px; }
+              #idInfos > span { font-size: 22px; }
+              #idInfos > button { font-size: small; }
+              #idprogress { width:42%; }
+              .name { font-size: 21px; }
+              .cost { font-size: 18px; }
+              #TableObjects > div > a > div > input { position: absolute; left: 0; top: 0; width: 75px; height: 75px; background-repeat: no-repeat; background-attachment: fixed; background-position: center; }
+              .divinfo > div { margin: 11px; }
+              .highwidth { font-size: 10px; }
+              .#specials > div { background-image: initial; border: 0; }
+              .divinfo > div > img { padding-bottom: 3px; height: 18px; }
+              .specinfos { height: 250px; width: 241px; }
+              .comginsoon { font-size: 36px; }
+              .alltolist { padding-left: 35px; }
+              .tolist { font-size: 15px; }
+              #idmain2 { height: 123px; transition: 0s; }
+              .centermargin1 { margin: 3.5%; }
+              #idmain2 + div > div { margin-top: 1%; margin-bottom: 0; }
+              #idImage img { margin: auto;}
+              .highwidth > p { font-size: 2em; height: 23px; }
+              .divinfo { width: 89%; }
+              .achisection {height: 625px;}
+            }
+
+            /* telephone horizontal */
+            @media only screen and (max-width: 580px) {
+              #meters, #kilometers, #light-years { font-size: 13px; }
+              #TableObjects > div { height: 75px; }
+              .divinfo { position: absolute; height: 74px; width: 85%; padding-top: 3px; }
+              #TableObjects > div > a > div { text-align: center; }
+              .center2 { position: relative; margin: initial; padding-top: 12px; }
+              #nbrAtomes { font-size: 0.8em; }
+              #atomepersecond { font-size: 0.6em; }
+              #idmain2 + div { font-size: 0.6em; }
+              .navig { font-size: 21px; }
+              #idInfos > p { font-size: 2em; }
+              #idInfos > div > p { font-size: 0.75em; }
+              #sizetitle { font-size: 22px; }
+              #idInfos > span { font-size: 22px; }
+              #idInfos > button { font-size: small; }
+              #idprogress { height: 200px; }
+              .name { font-size: 24px; }
+              .cost { font-size: 22px; }
+              #TableObjects > div > a > div > input { position: absolute; left: 0; top: 0; width: 75px; height: 75px; background-repeat: no-repeat; background-attachment: fixed; background-position: center; }
+              .divinfo > div { margin: 7px; }
+              .highwidth { font-size: 10px; }
+              .imagesSpecs { height: 250px; width: 241px; margin-left: 118px; }
+              #specials > div { height: 250px; background-image: initial; border: 0; }
+              .divinfo > div > img { padding-bottom: 5px; height: 21px; }
+              #specials > div > img { margin-left: 118px; }
+              .specnames { font-size: 25px; }
+              .specdesc { font-size: 17px; }
+              .speccost { font-size: 21px; }
+              .specresult { font-size: 14px; }
+              .specinfos { height: 250px; width: 241px; margin-top: 30px; }
+              .comginsoon { font-size: 36px; }
+              .alltolist { padding-left: 35px; }
+              .tolist { font-size: 15px; }
+              .forsaving { padding-top: 20px; }
+              #idmain2 { height: 78px; }
+              #idmain2 + div { height: 78px; }
+              .centermargin1 { margin: 3.5%; }
+              #idmain2 + div > div { margin-top: 1%; margin-bottom: 0; }
+              #idImage img { margin-left: auto; margin-right: auto; }
+            }
+
+            /* telephone vertical */
+            @media only screen and (max-width: 400px) {
+              #meters, #kilometers, #light-years { font-size: 13px; }
+              #TableObjects > div { height: 50px; }
+              .divinfo { position: absolute; height: 49px; width: 81.3%; padding-top: 3px; }
+              #TableObjects > div > a > div { text-align: center; }
+              .center2 { position: relative; margin: initial; padding-top: 12px; }
+              #nbrAtomes { font-size: 0.8em; }
+              #atomepersecond { font-size: 0.6em; }
+              #idmain2 + div { font-size: 0.6em; }
+              .navig { font-size: 21px; }
+              #idmain2 { height: 75px; }
+              #idmain2 + div { height: 78px; }
+              #idInfos > p { font-size: 1.25em; }
+              #idInfos > div > p { font-size: 0.65em; }
+              #sizetitle { font-size: 22px; }
+              #idInfos > span { font-size: 22px; }
+              #idInfos > button { font-size: small; }
+              #idprogress { height: 200px; }
+              .name { font-size: 18px; }
+              .cost { font-size: 18px; }
+              #TableObjects > div > a > div > input { position: absolute; left: 0; top: 0; width: 50px; height: 50px; background-repeat: no-repeat; background-attachment: fixed; background-position: center; }
+              .divinfo > div > img { padding-bottom: 3px; height: 16px; }
+              .divinfo > div { margin: 0; }
+              .highwidth { font-size: 10px; }
+              .imagesSpecs { height: 250px; width: 241px; }
+              #specials > div { height: 250px; }
+              .specnames { font-size: 25px; }
+              .specdesc { font-size: 17px; }
+              .speccost { font-size: 21px; }
+              .specresult { font-size: 14px; }
+              .specinfos { height: 250px; width: 241px; margin-top: 20%; }
+              .comginsoon { font-size: 36px; }
+              .alltolist { padding-left: 35px; }
+              .tolist { font-size: 15px; }
+              .forsaving { padding-top: 20px; }
+              #comingsoon { font-size: 20px; }
+              .highwidth > p { height: 46px; }
+            }
+
+            
